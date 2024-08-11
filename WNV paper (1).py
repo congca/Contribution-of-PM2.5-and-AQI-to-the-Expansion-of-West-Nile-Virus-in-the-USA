@@ -48,7 +48,7 @@ numeric_columns = ['Neuroinvasive', 'Non_neuroinvasive', 'AQI', 'PM2.5']
 data_long[numeric_columns] = data_long[numeric_columns].apply(pd.to_numeric, errors='coerce')
 
 # Handle missing values
-data_long.fillna(0, inplace=True)  # You can also choose to drop missing values with data_long.dropna(inplace=True)
+data_long.fillna(0, inplace=True)  
 
 # Assume 10% reduction in PM2.5
 data_long['PM2.5_policy'] = data_long['PM2.5'] * 0.9
@@ -130,7 +130,7 @@ numeric_columns = ['Neuroinvasive', 'Non_neuroinvasive', 'AQI', 'PM2.5']
 data_long[numeric_columns] = data_long[numeric_columns].apply(pd.to_numeric, errors='coerce')
 
 # Handle missing values
-data_long.fillna(0, inplace=True)  # You can also choose to drop missing values with data_long.dropna(inplace=True)
+data_long.fillna(0, inplace=True)  
 
 # Assume 10% reduction in PM2.5
 data_long['PM2.5_policy'] = data_long['PM2.5'] * 0.9
